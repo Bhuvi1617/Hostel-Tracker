@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const FoodList = () => {
-  const [entries, setEntries] = useState([]); // default to empty array
-  const [loading, setLoading] = useState(true); // track loading
-  const [error, setError] = useState(null);     // track errors
+  const [entries, setEntries] = useState([]); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null);    
 
   useEffect(() => {
     const fetchEntries = async () => {

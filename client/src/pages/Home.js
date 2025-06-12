@@ -6,7 +6,7 @@ const Home = () => {
   const [entries, setEntries] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/foodentry')
+    fetch('https://hostel-tracker.onrender.com/api/foodentry')
       .then((res) => res.json())
       .then((data) => setEntries(data))
       .catch((err) => console.error("Failed to load data", err));
