@@ -9,7 +9,7 @@ const FoodList = () => {
   useEffect(() => {
     const fetchEntries = async () => {
       try {
-        const res = await axios.get('/api/foodentry');
+        const res = await axios.get('https://hostel-tracker.onrender.com/api/foodentry');
         if (Array.isArray(res.data)) {
           setEntries(res.data);
         } else {
