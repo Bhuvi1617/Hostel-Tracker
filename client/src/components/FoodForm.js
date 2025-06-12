@@ -7,7 +7,7 @@ const FoodForm = ({ onAdd }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('http://localhost:5000/api/foodentry', {
+    const res = await fetch('https://hostel-tracker.onrender.com/api/foodentry', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ meal, mood }),
