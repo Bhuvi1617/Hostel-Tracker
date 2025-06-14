@@ -1,28 +1,16 @@
-import { useState, useEffect } from 'react';
-import FoodForm from '../components/FoodForm';
-import FoodList from '../components/FoodList';
+import React from 'react';
+import FoodLogger from '../components/FoodLogger';
 
 const Home = () => {
-  const [entries, setEntries] = useState([]);
-
-  useEffect(() => {
-    fetch('https://hostel-tracker.onrender.com/api/foodentry')
-      .then((res) => res.json())
-      .then((data) => setEntries(data))
-      .catch((err) => console.error("Failed to load data", err));
-  }, []);
-
-  const addEntry = (newEntry) => {
-    setEntries([newEntry, ...entries]);
-  };
-
   return (
-    <div>
-      <h1>🍱 Hostel Life Tracker</h1>
-      <FoodForm onAdd={addEntry} />
-      <FoodList entries={entries} />
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center px-4 py-10">
+      <h1 className="text-3xl md:text-4xl font-bold text-indigo-600 mb-6 text-center">
+         Hostel Life Tracker
+      </h1>
+      <FoodLogger />
     </div>
   );
 };
 
 export default Home;
+

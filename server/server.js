@@ -17,25 +17,26 @@ mongoose.connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 })
 .then(() => console.log("MongoDB connected"))
-.catch((err) => console.error("Database connection error: ", err));
+.catch((err) => console.error("Cannot connect to MongoDB ", err));
 
 
 app.use('/api/foodentry', foodRoutes);
+//ok so, API requests will be handled by foodRoutes.js
 
 
 app.get('/', (req, res) => {
   res.send('Backend is running');
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; //run on port specified or 5000 local host 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-// Dummy GET Route
-app.get("/ping", (req, res) => {
-  res.json({ message: "pong!" });
+
+app.get("/hey", (req, res) => {
+  res.json({ message: "yeah!" });
 });
 
-// Dummy  POST Route
+
 app.post("/test", (req, res) => {
   console.log(req.body);
   res.json({ status: "Received", data: req.body });
