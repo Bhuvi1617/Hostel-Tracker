@@ -49,7 +49,7 @@ const FoodLogger = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 to-indigo-200 px-4 py-10 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">Hostel Life Food Logger 🥗</h1>
+      <h1 className="text-4xl font-bold text-green-800 mb-8 text-center">Food Logger🥘</h1>
 
       <div className="w-full max-w-2xl bg-white p-6 rounded-2xl shadow-lg mb-10">
         <FoodForm onSubmit={handleAddOrEdit} initialData={editEntry} />

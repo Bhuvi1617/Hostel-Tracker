@@ -1,5 +1,6 @@
 import express from 'express';
 import FoodEntry from '../models/FoodEntry.js';
+import {sendSMS}   from '../utils/sendSms.js';
 
 const router = express.Router();
 
@@ -63,7 +64,17 @@ router.post('/', async (req, res) => {
   try {
     const newEntry = new FoodEntry(req.body);
     await newEntry.save(); // storing in Mongo !
+  
+    if (req.body.calories > 800) {
+     
+     await sendSMS(
+  process.env.MY_PHONE_NUMBER, 
+  ` High Calorie Alert!\nMeal: ${req.body.meal}\nCalories: ${req.body.calories} cal `
+);
+
+    }
     res.status(201).json(newEntry);
+     
   } catch (error) {
     console.error('Error saving new food entry', error);
     res.status(400).json({ message: error.message });

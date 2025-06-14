@@ -102,7 +102,7 @@ const FoodForm = ({ onSubmit, initialData }) => {
         type="submit"
         className="w-full bg-indigo-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-600 transition"
       >
-        {initialData ? 'Update' : 'Add Entry'}
+        {initialData ? 'Update' : 'Add Log'}
       </button>
     </form>
   );
