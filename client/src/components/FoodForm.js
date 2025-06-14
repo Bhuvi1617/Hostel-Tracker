@@ -7,7 +7,7 @@ const FoodForm = ({ onSubmit, initialData }) => {
   const [meal, setMeal] = useState('');
   const [mood, setMood] = useState('');
   const [foodItems, setFoodItems] = useState('');
-  const [quantity, setQuantity] = useState('');
+  
   const [calories, setCalories] = useState('');
   const [date, setDate] = useState(new Date());
 
@@ -16,7 +16,7 @@ const FoodForm = ({ onSubmit, initialData }) => {
       setMeal(initialData.meal || '');
       setMood(initialData.mood || '');
       setFoodItems(initialData.foodItems?.join(', ') || '');
-      setQuantity(initialData.quantity || '');
+      
       setCalories(initialData.calories || '');
       setDate(initialData.date ? new Date(initialData.date) : new Date());
     }
@@ -29,7 +29,7 @@ const FoodForm = ({ onSubmit, initialData }) => {
       meal,
       mood,
       foodItems: foodItems.split(',').map((item) => item.trim()),
-      quantity: parseInt(quantity),
+     
       calories: parseInt(calories),
       date,
     };
@@ -40,7 +40,7 @@ const FoodForm = ({ onSubmit, initialData }) => {
       setMeal('');
       setMood('');
       setFoodItems('');
-      setQuantity('');
+     
       setCalories('');
       setDate(new Date());
     } catch (err) {
@@ -79,13 +79,7 @@ const FoodForm = ({ onSubmit, initialData }) => {
         className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
       />
 
-      <input
-        type="number"
-        placeholder="Quantity"
-        value={quantity}
-        onChange={(e) => setQuantity(e.target.value)}
-        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
-      />
+      
 
       <input
         type="number"

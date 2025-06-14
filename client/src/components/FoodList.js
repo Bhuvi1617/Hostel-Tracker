@@ -41,7 +41,7 @@ const FoodList = ({ entries = [], onDelete, onEdit }) => {
                 <span className="font-semibold">{new Date(entry.date).toLocaleDateString()}</span><br />
                 🍽️ <span className="font-medium">{entry.meal}</span> — Mood: 😎 {entry.mood}<br />
                 📝 Items: {entry.foodItems.join(', ')}<br />
-                🔢 Quantity: {entry.quantity} | 🔥 {entry.calories} cal
+               🔥 {entry.calories} cal
               </p>
 
               <div className="flex gap-3">

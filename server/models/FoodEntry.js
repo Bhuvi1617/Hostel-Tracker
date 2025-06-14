@@ -5,7 +5,6 @@ const foodEntrySchema = new mongoose.Schema({
   meal: { type: String, required: true },
   mood: { type: String },
   foodItems: [{type:String}],
-  quantity : Number,
   calories : Number
 });
 
