@@ -17,7 +17,7 @@ const FoodList = ({ entries = [], onDelete, onEdit }) => {
 
   return (
     <div className="p-6 rounded-xl bg-[#D9D9D9] bg-opacity-80 mt-10">
-      <h2 className="text-2xl font-bold text-center text-black-800 mb-4">
+      <h2 className="text-xl font-semibold text-center text-white-700">
         ✨ Your Meal Logs ✨
       </h2>
 
@@ -34,7 +34,7 @@ const FoodList = ({ entries = [], onDelete, onEdit }) => {
 
       {filteredEntries.length === 0 ? (
         <p className="text-center text-gray-500 italic">
-          Oops, no entries for this date!
+          You didn't log on this day !
         </p>
       ) : (
         <ul className="space-y-4">
