@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import FoodForm from './FoodForm';
 import FoodList from './FoodList';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const FoodLogger = () => {
   const [entries, setEntries] = useState([]);
