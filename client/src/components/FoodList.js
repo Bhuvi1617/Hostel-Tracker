@@ -16,32 +16,38 @@ const FoodList = ({ entries = [], onDelete, onEdit }) => {
   }, [selectedDate, entries]);
 
   return (
-    <div className="p-4 bg-white rounded-xl shadow-lg">
-      <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">✨ Your Meal Logs ✨</h2>
+    <div className="p-6 rounded-xl bg-[#D9D9D9] bg-opacity-80 mt-10">
+      <h2 className="text-2xl font-bold text-center text-black-800 mb-4">
+        ✨ Your Meal Logs ✨
+      </h2>
 
       <div className="mb-6 text-center">
-        <label className="block text-gray-600 font-medium mb-2">📅 Select a date:</label>
+        <label className="block text-gray-600 font-medium mb-2">
+          📅 Select a date:
+        </label>
         <DatePicker
           selected={selectedDate}
           onChange={(date) => setSelectedDate(date)}
-          className="border border-gray-300 rounded-md px-3 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
       </div>
 
       {filteredEntries.length === 0 ? (
-        <p className="text-center text-gray-500 italic">Oops, no entries for this date!</p>
+        <p className="text-center text-gray-500 italic">
+          Oops, no entries for this date!
+        </p>
       ) : (
         <ul className="space-y-4">
           {filteredEntries.map((entry) => (
             <li
               key={entry._id}
-              className="border border-gray-300 p-4 rounded-lg shadow-sm bg-gray-50"
+              className="bg-[#FFEA99] p-4 rounded-lg shadow-md border border-yellow-200"
             >
-              <p className="text-gray-700 leading-relaxed mb-3">
-                <span className="font-semibold">{new Date(entry.date).toLocaleDateString()}</span><br />
-                🍽️ <span className="font-medium">{entry.meal}</span> — Mood: 😎 {entry.mood}<br />
-                📝 Items: {entry.foodItems.join(', ')}<br />
-               🔥 {entry.calories} cal
+              <p className="text-gray-800 mb-3 leading-relaxed">
+                <span className="font-bold text-black-800">📅 {new Date(entry.date).toLocaleDateString()}</span><br />
+                🍽️ <span className="text-[20px] font-semibold">{entry.meal}</span>　 (👉ﾟヮﾟ)👉 Mood: <span className="italic">{entry.mood}</span><br />
+                📝 {entry.foodItems.join(', ')}<br />
+                🔥 {entry.calories} cal
               </p>
 
               <div className="flex gap-3">

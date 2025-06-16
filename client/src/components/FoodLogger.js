@@ -43,21 +43,11 @@ const FoodLogger = () => {
     }
   };
 
-  const handleEdit = (entry) => {
-    setEditEntry(entry);
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-100 to-indigo-200 px-4 py-10 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-green-800 mb-8 text-center">Food Logger🥘</h1>
-
-      <div className="w-full max-w-2xl bg-white p-6 rounded-2xl shadow-lg mb-10">
-        <FoodForm onSubmit={handleAddOrEdit} initialData={editEntry} />
-      </div>
-
-      <div className="w-full max-w-2xl">
-        <FoodList entries={entries} onDelete={handleDelete} onEdit={handleEdit} />
-      </div>
+    <div className="w-full max-w-[612px] bg-[#FF6262] bg-opacity-70 rounded-2xl shadow-lg p-8">
+      <h1 className="text-[44px] font-[Koulen] text-black text-center mb-8"> FOOD LOGGER</h1>
+      <FoodForm onSubmit={handleAddOrEdit} initialData={editEntry} />
+      <FoodList entries={entries} onDelete={handleDelete} onEdit={setEditEntry} />
     </div>
   );
 };
