@@ -38,6 +38,10 @@ const FoodLogger = () => {
     try {
       await axios.delete(`https://hostel-tracker.onrender.com/api/foodentry/${id}`);
       fetchEntries();
+      toast.success("Food log deleted!", {
+      position: "top-right",
+    
+    });
     } catch (error) {
       console.error('Delete failed', error);
     }
