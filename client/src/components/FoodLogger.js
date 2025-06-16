@@ -9,7 +9,7 @@ const FoodLogger = () => {
 
   const fetchEntries = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/foodentry');
+      const res = await axios.get('https://hostel-tracker.onrender.com/api/foodentry');
       setEntries(res.data);
     } catch (error) {
       console.error('Fetching entries failed:', error);
@@ -23,9 +23,9 @@ const FoodLogger = () => {
   const handleAddOrEdit = async (entry) => {
     try {
       if (editEntry) {
-        await axios.put(`http://localhost:5000/api/foodentry/${editEntry._id}`, entry);
+        await axios.put(`https://hostel-tracker.onrender.com/api/foodentry/${editEntry._id}`, entry);
       } else {
-        await axios.post('http://localhost:5000/api/foodentry', entry);
+        await axios.post('https://hostel-tracker.onrender.com/api/foodentry', entry);
       }
       setEditEntry(null);
       fetchEntries();
@@ -36,7 +36,7 @@ const FoodLogger = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/foodentry/${id}`);
+      await axios.delete(`https://hostel-tracker.onrender.com/api/foodentry/${id}`);
       fetchEntries();
     } catch (error) {
       console.error('Delete failed', error);
