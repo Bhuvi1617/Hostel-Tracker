@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=86E7B8&center=true&vCenter=true&width=550&lines=Welcome+to+Hostalogue+%F0%9F%8D%B3;Because+hostel+food+is+an+adventure" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=F79EC4&center=true&vCenter=true&width=550&lines=Welcome+to+Hostalogue+%F0%9F%8D%B3;Because+hostel+food+is+an+adventure" alt="Typing SVG" />
 </p>
 
 ---
@@ -7,46 +7,37 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Stack-MERN-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Track-Food%20%7C%20Mood%20%7C%20Meals-blueviolet?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-WIP-yellow?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Work%20in%20Progress-yellow?style=for-the-badge" />
 </p>
 
 ---
 
-## 🍛 About the Project
+<h2 style="color:#f79ec4">About the Project</h2>
 
-> _“My food choices scared me… so I built a full-stack tracker to fix that.”_
-
-**Hostalogue** is your digital roommate — a cozy tool to track what you ate,  
-when you ate it, and whether it was *delight or disaster* 😅
-
-Built to handle real hostel chaos with:
-- Simple forms
-- Date filters
-- Toast alerts
-- Full CRUD functionality
+👉 [Read full article on Dev.to](https://dev.to/bhuvi_d/my-food-choices-scared-me-so-i-coded-a-solution-5ffi)
 
 ---
 
-## ✨ Features
+<h2 style="color:#f79ec4">✨ Features</h2>
 
-- 🍽️ Add daily food logs with optional notes
-- 📆 Filter meals by date using a date picker
-- ✏️ Edit or delete entries anytime (CRUD complete!)
-- 📊 See how your hostel food routine evolves
-- 🔔 Sweet React Toastify alerts & UI polish
+-  **Add, edit, delete** food entries anytime (full CRUD)
+-  **Date filtering** using `react-datepicker`
+-  Instant alerts with `react-toastify`
+-  **Twilio SMS notifications** (If calories > 800 | hard-coded to my phone no. for now :) )
+
 
 ---
 
-## 🛠️ Tech Stack
+<h2 style="color:#f79ec4">Tech Stack</h2>
 
-- **Frontend:** React, Tailwind CSS, React Datepicker, Toastify  
+- **Frontend:** React, Tailwind CSS  
 - **Backend:** Node.js, Express.js  
 - **Database:** MongoDB + Mongoose  
-- **Others:** GitHub Actions (optional), Netlify/Vercel (frontend), Render (backend)
+- **Tools:** React Datepicker, Toastify, Twilio API
 
 ---
 
-## 🚀 Getting Started
+<h2 style="color:#f79ec4"> Getting Started</h2>
 
 ```bash
 # clone the repo
