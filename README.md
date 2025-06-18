@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=F79EC4&center=true&vCenter=true&width=550&lines=Welcome+to+Hostalogue+%F0%9F%8D%B3;Because+hostel+food+is+an+adventure" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&pause=1000&color=F79EC4&center=true&vCenter=true&width=550&lines=Welcome+to+Hostalogue" alt="Typing SVG" />
 </p>
 
 ---
